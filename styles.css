@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Jacquard+12&display=swap');
+body {
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    font-family: "Cinzel", serif;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -10px;  
+    padding: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.26);
+}
+.elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    gap: 32px;
+}
+button { 
+    height: 200px;
+    width: 200px;
+}
+.fire {
+    background-image: url("img/fire.jpg");
+    background-size: cover;
+}
+.water {
+    background-image: url("img/water.jpg");
+    background-size: cover;
+}
+.earth {
+    background-image: url("img/earth.jpg");
+    background-size: cover;
+}
+.air {
+    background-image: url("img/air.jpg");
+    background-size: cover;
+}
+.result {
+    color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.fight {
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+    font-weight: bold;
+}
+.humen-element {
+    color: blue;
+    width: 200px;
+}
+.computer-element {
+    color: red;
+    width: 250px;
+}
+.humen-element > img {
+    width: 200px;
+    height: 200px;
+}
