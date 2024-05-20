@@ -2,18 +2,22 @@ function getComputerChoise() {
     let c = Math.floor(Math.random() * 4)
     return c
 }
+let humanCounterDisplay = document.querySelector(".human-counter")
+let computerCounterDisplay = document.querySelector(".computer-counter")
+let count1 = 0
+let count2 = 0
 const fire = document.querySelector(".fire")
 fire.onclick = () => { 
     let a = getComputerChoise()
     let b = 0
     let result = getFightResult(a, b)
     document.querySelector(".result").innerHTML = result
-    let newimg = document.createElement("img");
-    newimg.classList.add("newimg")
-    newimg.src = "img/fire.jpg";
-    let src = document.querySelector(".humen-element");
-    let newimgClass = document.querySelector(".newimg")
-    
+    if (result == "You Win! Fire Beats Air.")
+        count1++
+    else if (result == "You Lost! Fire Loses to Water.")
+        count2++
+    humanCounterDisplay.innerHTML = count1
+    computerCounterDisplay.innerHTML = count2
 }
 const water = document.querySelector(".water")
 water.onclick = () => { 
@@ -21,6 +25,12 @@ water.onclick = () => {
     let b = 1
     let result = getFightResult(a, b)
     document.querySelector(".result").innerHTML = result
+    if (result == "You Win! Water Beats Fire.")
+        count1++
+    else if (result == "You Lost! Water Loses to Earth.")
+        count2++
+    humanCounterDisplay.innerHTML = count1
+    computerCounterDisplay.innerHTML = count2
 }
 const earth = document.querySelector(".earth")
 earth.onclick = () => { 
@@ -28,6 +38,12 @@ earth.onclick = () => {
     let b = 2
     let result = getFightResult(a, b)
     document.querySelector(".result").innerHTML = result
+    if (result == "You Win! Earth Beats Water.")
+        count1++
+    else if (result == "You Lost! Earth Loses to Air.")
+        count2++
+    humanCounterDisplay.innerHTML = count1
+    computerCounterDisplay.innerHTML = count2
 }
 const air = document.querySelector(".air")
 air.onclick = () => { 
@@ -35,46 +51,51 @@ air.onclick = () => {
     let b = 3
     let result = getFightResult(a, b)
     document.querySelector(".result").innerHTML = result
-
+    if (result == "You Win! Air Beats Earth.")
+        count1++
+    else if (result == "You Lost! Air Loses to Fire.")
+        count2++
+    humanCounterDisplay.innerHTML = count1
+    computerCounterDisplay.innerHTML = count2
 }
 
 function getFightResult(a, b) {
     if (b==0)
         if (a == 0)
-            return "A Draw!"
+            return "A Draw! Fire Draws With Fire."
         else if (a == 1)
-            return "You Win! Victory Was Inevitable!"
+            return "You Lost! Fire Loses to Water."
         else if (a == 2)
-            return "A Draw!"
+            return "A Draw! Fire Doesn't work on Earth."
         else
-            return "You Lost! You have failed your nation."
+            return "You Win! Fire Beats Air."
     else if (b==1)
         if (a == 0)
-            return "You Win! Victory Was Inevitable!"
+            return "You Win! Water Beats Fire."
         else if (a == 1)
-            return "A Draw!"
+            return "A Draw! Water Draws with Water."
         else if (a == 2)
-            return "You Lost! You have failed your nation."
+            return "You Lost! Water Loses to Earth."
         else
-            return "A Draw!"
+            return "A Draw! Water Doesn't work on Air."
 
     else if (b==2)
         if (a == 0)
-            return "A Draw!"
+            return "A Draw! Earth Doesn't work on Fire."
         else if (a == 1)
-            return "You Win! Victory Was Inevitable!"
+            return "You Win! Earth Beats Water."
         else if (a == 2)
-            return "A Draw!"
+            return "A Draw! Earth Draws with Earth."
         else
-            return "You Lost! You have failed your nation."
+            return "You Lost! Earth Loses to Air."
     else 
         if (a == 0)
-            return "You Lost! You have failed your nation."
+            return "You Lost! Air Loses to Fire."
         else if (a == 1)
-            return "A Draw!"
+            return "A Draw! Air Doesn't work on Water."
         else if (a == 2)
-            return "You Win! Victory Was Inevitable!"
+            return "You Win! Air Beats Earth."
         else
-            return "A Draw!"
+            return "A Draw! Air Draws with Air."
 }
 
