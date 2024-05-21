@@ -11,11 +11,21 @@ fire.onclick = () => {
     let a = getComputerChoise()
     let b = 0
     let result = getFightResult(a, b)
-    document.querySelector(".result").innerHTML = result
     if (result == "You Win! Fire Beats Air.")
         count1++
     else if (result == "You Lost! Fire Loses to Water.")
         count2++
+    if (count1 == 5) {
+        result = "You Won! Victory was inevitble!"
+        count1 = 0
+        count2 = 0
+    }
+    else if (count2 == 5) {
+        result = "You Lost! You have failed your nation."
+        count2 = 0
+        count1 = 0
+    }
+    document.querySelector(".result").innerHTML = result
     humanCounterDisplay.innerHTML = count1
     computerCounterDisplay.innerHTML = count2
 }
@@ -24,11 +34,21 @@ water.onclick = () => {
     let a = getComputerChoise()
     let b = 1
     let result = getFightResult(a, b)
-    document.querySelector(".result").innerHTML = result
     if (result == "You Win! Water Beats Fire.")
         count1++
     else if (result == "You Lost! Water Loses to Earth.")
         count2++
+    if (count1 == 5) {
+        result = "You Won! Victory was inevitble!"
+        count1 = 0
+        count2 = 0
+    }
+    else if (count2 == 5) {
+        result = "You Lost! You have failed your nation."
+        count2 = 0
+        count1 = 0
+    }
+    document.querySelector(".result").innerHTML = result
     humanCounterDisplay.innerHTML = count1
     computerCounterDisplay.innerHTML = count2
 }
@@ -37,11 +57,21 @@ earth.onclick = () => {
     let a = getComputerChoise()
     let b = 2
     let result = getFightResult(a, b)
-    document.querySelector(".result").innerHTML = result
     if (result == "You Win! Earth Beats Water.")
         count1++
     else if (result == "You Lost! Earth Loses to Air.")
         count2++
+    if (count1 == 5) {
+        result = "You Won! Victory was inevitble!"
+        count1 = 0
+        count2 = 0
+    }
+    else if (count2 == 5) {
+        result = "You Lost! You have failed your nation."
+        count2 = 0
+        count1 = 0
+    }
+    document.querySelector(".result").innerHTML = result
     humanCounterDisplay.innerHTML = count1
     computerCounterDisplay.innerHTML = count2
 }
@@ -50,11 +80,21 @@ air.onclick = () => {
     let a = getComputerChoise()
     let b = 3
     let result = getFightResult(a, b)
-    document.querySelector(".result").innerHTML = result
     if (result == "You Win! Air Beats Earth.")
         count1++
     else if (result == "You Lost! Air Loses to Fire.")
         count2++
+    if (count1 == 5) {
+        result = "You Won! Victory was inevitble!"
+        count1 = 0
+        count2 = 0
+    }
+    else if (count2 == 5) {
+        result = "You Lost! You have failed your nation."
+        count2 = 0
+        count1 = 0
+    }
+    document.querySelector(".result").innerHTML = result
     humanCounterDisplay.innerHTML = count1
     computerCounterDisplay.innerHTML = count2
 }

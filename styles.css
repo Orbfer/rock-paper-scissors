@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 300px;
     gap: 32px;
 }
 button { 
@@ -50,8 +50,34 @@ button {
     font-size: 24px;
     font-weight: bold;
 }
+.scores {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 24px;
+
+}
+
 .counters {
     display: flex;
     justify-content: space-evenly;
     font-size: 64px;
+}
+.human-counter {
+    color: white;
+    font-weight: bold;
+}
+.computer-counter {
+    color: black;
+    font-weight: bold;
+}
+.human-score {
+    margin-left: 80px;
+    color: white;
+
+}
+.computer-score {
+    color: black;
+    margin-right: 32px;
+    font-weight: bold;
+
 }
